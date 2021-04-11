@@ -1,0 +1,17 @@
+{
+  "name": "navalny-free",
+  "version": "1.0.0",
+  "description": "",
+  "main": "proxy.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "http-proxy": "^1.11.1",
+    "no-cors-proxy": "^1.0.5",
+    "url": "^0.10.3"
+  }
+}

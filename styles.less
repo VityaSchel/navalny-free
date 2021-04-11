@@ -1,0 +1,115 @@
+@import "./stylesheet.css";
+@primary: rgb(255, 51, 0);
+@secondary: rgb(0, 127, 163);
+
+body {
+  margin: 0;
+  background-color: black;
+  font-family: "Graphik LCG";
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  font-size: 1em;
+
+  &.obs {
+    background-color: @primary;
+    font-size: 20em;
+  }
+
+  #flex-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+    #left-col {
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        li:not(:nth-child(1)) {
+          margin-top: 15px;
+        }
+      }
+    }
+    #right-col {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      flex-direction: column;
+
+      div {
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+
+        #counter {
+          font-size: 2.5em;
+          transition: opacity 0.225s ease-in-out;
+        }
+
+        .prizuv {
+          margin-top: 40px;
+        }
+
+        .ssilka {
+          margin-top:10px;
+          font-size: 1.35em;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  &.celebration {
+    transition: background-color 0.5s ease-in-out;
+    background-color: @secondary;
+  }
+}
+
+#counter {
+  display: block !important;
+
+  &:not(.fixed) {
+    width: fit-content;
+    position: static;
+    padding-right: 3px;
+  }
+
+  &.fixed {
+    position: relative;
+    overflow: hidden;
+  }
+
+  span {
+    transition: transform 0.5s ease-in-out;
+
+    &.positioned {
+      position: absolute;
+    }
+
+    &.from_bottom {
+      top: 100%;
+    }
+
+    &.from_top {
+      bottom: 200%;
+      transition: bottom 0.4s ease-in-out !important;
+
+      &.to_bottom {
+        bottom: 100%;
+      }
+    }
+
+    &.to_bottom {
+      transform: translateY(100%);
+    }
+
+    &.to_top {
+      transform: translateY(-100%);
+    }
+  }
+}
