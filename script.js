@@ -27,9 +27,9 @@ function personUpdate(js){
 
   let notification_number = notifications.filter(i => (js.persons-i < 5000) && (js.persons-i > 0))[0]
   if(!notified_about.includes(notification_number)){
-    const notification = "https://api.telegram.org/bot1453311877:AAEkFmrjhuhOmoAfJOJome33ni93ExlLgpI/sendMessage?chat_id=270882543&text={KS}%20%D1%83%D1%87%D0%B0%D1%81%D1%82%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2%20%D0%B0%D0%BA%D1%86%D0%B8%D0%B8%21&reply_markup=%7B%22inline_keyboard%22%3A%5B%5B%7B%22text%22%3A%22%D0%9F%D0%B5%D1%80%D0%B5%D0%B9%D1%82%D0%B8%20%D0%BD%D0%B0%20Youtube%22%2C%22url%22%3A%22https%3A%2F%2Fyoutu.be%2FOZzklIlp8XI%22%7D%5D%5D%7D"
+    const notification = "https://api.telegram.org/bot[removed while doing code review for hloth.dev/donate]/sendMessage?chat_id=270882543&text={KS}%20%D1%83%D1%87%D0%B0%D1%81%D1%82%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2%20%D0%B0%D0%BA%D1%86%D0%B8%D0%B8%21&reply_markup=%7B%22inline_keyboard%22%3A%5B%5B%7B%22text%22%3A%22%D0%9F%D0%B5%D1%80%D0%B5%D0%B9%D1%82%D0%B8%20%D0%BD%D0%B0%20Youtube%22%2C%22url%22%3A%22https%3A%2F%2Fyoutu.be%2FOZzklIlp8XI%22%7D%5D%5D%7D"
     fetch(notification.replace("{KS}", encodeURI(beautify_number(notification_number))))
-    notified_about.push(notification_number)
+        notified_about.push(notification_number)
   }
 }
 

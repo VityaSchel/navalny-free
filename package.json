@@ -4,7 +4,7 @@
   "description": "",
   "main": "proxy.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "no-cors-proxy -p 54229 -t https://free.navalny.com/"
   },
   "author": "",
   "license": "ISC",
